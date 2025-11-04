@@ -1,0 +1,131 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Product Categories
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  image       String?
+  products    Product[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("categories")
+}
+
+// Products
+model Product {
+  id           String    @id @default(cuid())
+  name         String
+  slug         String    @unique
+  description  String
+  shortDesc    String
+  price        Decimal   @db.Decimal(10, 2)
+  comparePrice Decimal?  @db.Decimal(10, 2)
+  sku          String    @unique
+  stock        Int       @default(0)
+  images       String[]
+  category     Category  @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  features     Json?     // Technical specifications
+  dosage       String?   // Application instructions
+  benefits     String[]  // List of benefits
+  rating       Float?    @default(0)
+  reviewCount  Int       @default(0)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  orderItems   OrderItem[]
+  reviews      Review[]
+
+  @@map("products")
+}
+
+// Orders
+model Order {
+  id            String      @id @default(cuid())
+  orderNumber   String      @unique
+  customerEmail String
+  customerName  String
+  totalAmount   Decimal     @db.Decimal(10, 2)
+  status        OrderStatus @default(PENDING)
+  paymentMethod String
+  paymentId     String?
+  shipping      Json?       // Shipping address
+  items         OrderItem[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("orders")
+}
+
+// Order Items
+model OrderItem {
+  id        String  @id @default(cuid())
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  quantity  Int
+  price     Decimal @db.Decimal(10, 2) // Price at time of purchase
+
+  @@map("order_items")
+}
+
+// Customer Reviews
+model Review {
+  id        String   @id @default(cuid())
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String
+  name      String
+  email     String
+  rating    Int      // 1-5 stars
+  comment   String?
+  approved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("reviews")
+}
+
+// Shopping Cart Sessions
+model CartSession {
+  id      String @id @default(cuid())
+  email   String?
+  items   Json   // Cart items as JSON
+  expires DateTime
+  createdAt DateTime @default(now())
+
+  @@map("cart_sessions")
+}
+
+// Admin Users
+model AdminUser {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String
+  password  String    // Hashed
+  role      String    @default("admin")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("admin_users")
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
