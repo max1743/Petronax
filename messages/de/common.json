@@ -1,0 +1,173 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "shop": "Shop",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cart": "Warenkorb",
+    "admin": "Admin",
+    "language": "Sprache",
+    "german": "Deutsch",
+    "english": "English"
+  },
+  "hero": {
+    "title": "Power. Precision. Protection.",
+    "subtitle": "Premium Additive für maximale Effizienz und Langlebigkeit",
+    "description": "Petronax ist Ihr führender Anbieter von hochwertigen Additiven für Fahrzeuge und Maschinen. Unsere innovativen Formeln sorgen für optimale Leistung und Schutz.",
+    "cta": "Jetzt Additive entdecken",
+    "features": {
+      "performance": {
+        "title": "Maximale Leistung",
+        "description": "Steigern Sie die Effizienz Ihres Motors um bis zu 15%"
+      },
+      "protection": {
+        "title": "Langzeit-Schutz",
+        "description": "Schützt vor Verschleiß und verlängert die Lebensdauer"
+      },
+      "quality": {
+        "title": "Premium Qualität",
+        "description": "Hergestellt in Deutschland nach höchsten Standards"
+      }
+    }
+  },
+  "product": {
+    "categories": "Produktkategorien",
+    "motoradditive": "Motoradditive",
+    "dieseladditive": "Dieseladditive",
+    "benzinadditive": "Benzinadditive",
+    "getriebe_oeladditive": "Getriebe- & Öladditive",
+    "industrieadditive": "Industrieadditive",
+    "featured": "Empfohlene Produkte",
+    "new": "Neu",
+    "sale": "Angebot",
+    "outOfStock": "Ausverkauft",
+    "inStock": "Auf Lager",
+    "addToCart": "In den Warenkorb",
+    "quickView": "Schnellansicht",
+    "details": "Details",
+    "specifications": "Technische Daten",
+    "dosage": "Dosierung",
+    "application": "Anwendung",
+    "benefits": "Vorteile",
+    "reviews": "Bewertungen",
+    "noReviews": "Noch keine Bewertungen",
+    "writeReview": "Bewertung schreiben",
+    "relatedProducts": "Ähnliche Produkte",
+    "compare": "Vergleichen",
+    "wishlist": "Merkliste"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer",
+    "continueShopping": "Weiter einkaufen",
+    "item": "Artikel",
+    "quantity": "Menge",
+    "price": "Preis",
+    "total": "Gesamt",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "tax": "MwSt.",
+    "discount": "Rabatt",
+    "couponCode": "Gutscheincode",
+    "applyCoupon": "Gutschein einlösen",
+    "updateCart": "Warenkorb aktualisieren",
+    "checkout": "Zur Kasse",
+    "remove": "Entfernen",
+    "saveForLater": "Für später speichern"
+  },
+  "checkout": {
+    "title": "Kasse",
+    "steps": {
+      "shipping": "Versandadresse",
+      "payment": "Zahlungsmethode",
+      "review": "Bestellung überprüfen",
+      "confirmation": "Bestellbestätigung"
+    },
+    "shippingAddress": "Versandadresse",
+    "billingAddress": "Rechnungsadresse",
+    "sameAsShipping": "Gleich wie Versandadresse",
+    "paymentMethod": "Zahlungsmethode",
+    "creditCard": "Kreditkarte",
+    "paypal": "PayPal",
+    "invoice": "Rechnung",
+    "placeOrder": "Bestellung aufgeben",
+    "orderSummary": "Bestellübersicht",
+    "orderSuccess": "Bestellung erfolgreich!",
+    "orderNumber": "Bestellnummer",
+    "emailConfirmation": "Bestätigungs-E-Mail",
+    "trackOrder": "Bestellung verfolgen"
+  },
+  "forms": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "company": "Firma",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "PLZ",
+    "country": "Land",
+    "message": "Nachricht",
+    "subject": "Betreff",
+    "required": "Pflichtfeld",
+    "optional": "Optional",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "search": "Suchen",
+    "filter": "Filter",
+    "sort": "Sortieren"
+  },
+  "errors": {
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "invalidPhone": "Bitte geben Sie eine gültige Telefonnummer ein",
+    "minLength": "Mindestens {{count}} Zeichen erforderlich",
+    "maxLength": "Maximal {{count}} Zeichen erlaubt",
+    "networkError": "Netzwerkfehler. Bitte versuchen Sie es erneut.",
+    "serverError": "Serverfehler. Bitte versuchen Sie es später erneut.",
+    "notFound": "Seite nicht gefunden",
+    "unauthorized": "Nicht autorisiert",
+    "forbidden": "Zugriff verweigert"
+  },
+  "success": {
+    "itemAddedToCart": "Artikel wurde zum Warenkorb hinzugefügt",
+    "itemRemovedFromCart": "Artikel wurde aus dem Warenkorb entfernt",
+    "cartUpdated": "Warenkorb wurde aktualisiert",
+    "orderPlaced": "Bestellung wurde erfolgreich aufgegeben",
+    "messageSent": "Nachricht wurde gesendet",
+    "reviewSubmitted": "Bewertung wurde gesendet",
+    "profileUpdated": "Profil wurde aktualisiert"
+  },
+  "footer": {
+    "aboutUs": "Über uns",
+    "customerService": "Kundenservice",
+    "contact": "Kontakt",
+    "shipping": "Versandinformationen",
+    "returns": "Rückgabe",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Bleiben Sie informiert über neue Produkte und Angebote",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "subscribe": "Anmelden"
+    },
+    "socialMedia": "Folgen Sie uns",
+    "copyright": "© {{year}} Petronax Corp. Alle Rechte vorbehalten."
+  },
+  "seo": {
+    "defaultTitle": "Petronax - Premium Additive für maximale Leistung",
+    "defaultDescription": "Entdecken Sie hochwertige Additive für Fahrzeuge und Maschinen bei Petronax. Power. Precision. Protection.",
+    "homepage": "Startseite",
+    "shop": "Shop",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cart": "Warenkorb",
+    "checkout": "Kasse"
+  }
+}
